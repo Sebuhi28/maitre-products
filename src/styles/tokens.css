@@ -1,0 +1,39 @@
+:root {
+  --color-primary: #a37b3e;
+  --color-primary-hover: #8c6731;
+  --color-bg: #fbf9f5;
+  --color-card: #ffffff;
+  --color-text: #292011;
+  --color-text-secondary: #78736b;
+  --color-border: #e6e6e6;
+  --color-success: #1f3a2c;
+  --color-success-bg: #eaf2ec;
+  --color-error: #9a3b1e;
+  --color-error-bg: #f6e6e0;
+
+  --font-main: "Hanken Grotesk", system-ui, sans-serif;
+  --font-label: "Onest", system-ui, sans-serif;
+
+  --radius-pill: 50px;
+  --radius-card: 16px;
+  --radius-modal: 20px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 40px;
+
+  --control-height: 48px;
+  --control-height-small: 36px;
+  --table-row-height: 64px;
+
+  --page-padding: 70px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --page-padding: 16px;
+  }
+}

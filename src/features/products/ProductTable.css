@@ -1,0 +1,147 @@
+.table-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: var(--space-4) var(--space-5);
+  text-align: left;
+  font-family: var(--font-label);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.table td {
+  height: var(--table-row-height);
+  padding: var(--space-3) var(--space-5);
+  border-top: 1px solid var(--color-border);
+  font-size: 15px;
+}
+
+.table__right {
+  text-align: right;
+}
+
+.name-az {
+  font-weight: 500;
+}
+
+.name-en {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.row--off .name-az,
+.row--off .tabular {
+  color: var(--color-text-secondary);
+}
+
+.chip {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  background: #f0e9de;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-size: 14px;
+}
+
+.chip--outline {
+  background: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.btn-small {
+  height: var(--control-height-small);
+  padding: 0 var(--space-5);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.btn-small:hover {
+  border-color: var(--color-primary);
+}
+
+@media (max-width: 640px) {
+  .table {
+    min-width: 0;
+  }
+
+  .table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .table,
+  .table tbody {
+    display: block;
+  }
+
+  .table tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "name price"
+      "category category"
+      "status actions";
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .table tr:first-child {
+    border-top: 0;
+  }
+
+  .table td {
+    display: block;
+    height: auto;
+    padding: 0;
+    border: 0;
+  }
+
+  .cell-name {
+    grid-area: name;
+  }
+
+  .cell-category {
+    grid-area: category;
+  }
+
+  .cell-price {
+    grid-area: price;
+    align-self: start;
+  }
+
+  .cell-status {
+    grid-area: status;
+  }
+
+  .cell-actions {
+    grid-area: actions;
+  }
+}

@@ -1,0 +1,82 @@
+.skeleton__row {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 0.8fr 1.2fr;
+  align-items: center;
+  gap: var(--space-5);
+  height: var(--table-row-height);
+  padding: 0 var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+.skeleton__row:first-of-type {
+  border-top: 0;
+}
+
+.skeleton__name {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.skeleton__bar {
+  display: block;
+  height: 12px;
+  background: linear-gradient(
+    90deg,
+    #efeae1 25%,
+    #f7f3ec 50%,
+    #efeae1 75%
+  );
+  background-size: 200% 100%;
+  border-radius: var(--radius-pill);
+  animation: shimmer 1.4s infinite linear;
+}
+
+.skeleton__bar--title {
+  width: 60%;
+}
+
+.skeleton__bar--sub {
+  width: 40%;
+  height: 10px;
+}
+
+.skeleton__bar--chip {
+  width: 90px;
+  height: 24px;
+}
+
+.skeleton__bar--price {
+  width: 60px;
+  justify-self: end;
+}
+
+.skeleton__bar--status {
+  width: 110px;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton__bar {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .skeleton__row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skeleton__bar--price,
+  .skeleton__bar--status {
+    display: none;
+  }
+}
