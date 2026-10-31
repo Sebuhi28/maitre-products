@@ -2,7 +2,7 @@
 
 Restoran menyusundakı məhsulları idarə etmək üçün admin panelin məhsullar səhifəsi.
 
-**Canlı link:** BURA_VERCEL_LINKINI_YAZIN
+**Canlı link:** https://maitre-products.vercel.app/
 
 ## İşə salmaq
 
